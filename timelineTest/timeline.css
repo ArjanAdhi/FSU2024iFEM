@@ -1,0 +1,124 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #f3ede1;
+    font-family: Arial, sans-serif;
+}
+
+.content {
+    height: 150%; /* Adjust as needed to enable scrolling */
+}
+
+#hover-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 20px; /* Width of the hitbox area */
+    height: 100%;
+    background: transparent; /* Invisible, but interactive */
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+#expandable-box {
+    position: fixed;
+    top: 0;
+    right: -200px; /* Initially hidden */
+    width: 200px; /* Width of the expanded box */
+    height: 100%;
+    background-color: #CEB888; /* Box color */
+    transition: right 0.3s; /* Smooth transition for expanding and collapsing */
+    z-index: 999; /* Behind the hover panel */
+}
+
+#arrow-indicator {
+    position: absolute;
+    top: 50%; /* Center vertically in the viewport */
+    right: 5px; /* Adjust based on the width of the hover-panel */
+    transform: translateY(-50%); /* Vertically center the arrow */
+    font-size: 60px; /* Triple the size */
+    color: #CEB888; /* Arrow color */
+    cursor: pointer; /* Change cursor to indicate interactivity */
+    transition: transform 0.3s ease, color 0.3s ease;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Black outlines */
+}
+
+#hover-panel:hover #arrow-indicator {
+    transform: translateY(-50%) translateX(-10px); /* Slight movement to indicate interaction */
+    color: #B8A078; /* Change color on hover for visual feedback */
+}
+
+#timeline {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    border-left: 2px solid black; /* Central line for the timeline */
+    width: 2px; /* Width of the central line */
+}
+
+.navbar {
+    background-color: #782f40;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #f3ede1;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.dropdown-menu .dropdown-item {
+    color: #808080;
+}
+
+.navbar .navbar-logo:hover {
+    background-color: inherit;
+    text-decoration: none;
+}
+
+.navbar .navbar-logo img {
+    height: 50px;
+}
+
+
+.navbar a:hover {
+    background-color: #f3ede1;
+    color: #782f40;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #aaa;
+    color: #000000;
+}
+
+.navbar a.active {
+    background-color: #4CAF50;
+    color: #ffffff;
+}
+
+.pagination-container {
+    padding: 10px; /* Optional: Add some padding */
+    width: 60%; /* Set the width to 70% of the parent container */
+    margin: 0 auto; /* Center the container */
+    background-color: #f8f8f8; /* Lighter background color for the container */
+}
+
+.page {
+    min-height: 70vh; /* Each page takes at least 70% of the viewport height */
+    border: 1px solid #ccc; /* Optional: Add a border for each page */
+    margin-bottom: 10px; /* Optional: Add some space between pages */
+    padding: 20px; /* Optional: Add some padding inside each page */
+    background-color: #ffffff; /* Lighter background color for each page */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for depth */
+}
+
+.spacer {
+    height: 150px; /* This should match the height of your fixed navbar */
+}

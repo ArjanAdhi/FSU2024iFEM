@@ -1,0 +1,124 @@
+html {
+    height: 100%;
+    background-color: #f3ede1;
+}
+
+body {
+    background-color: #f3ede1;
+}
+
+#container {
+    padding-top: 20px;
+    background: #f3ede1;
+}
+
+#book {
+    width: 90vw; /* 90% of the viewport width */
+    height: 80vh; /* 80% of the viewport height */
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f3ede1;
+}
+
+.page {
+    width: 45vw; /* Half the width of #book */
+    height: 80vh;
+    background-color: white;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 80vh; /* Equal to the height for vertical centering */
+    font-size: 24px;
+    background: white;
+}
+
+.navbar {
+    background-color: #782f40;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #f3ede1;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.dropdown-menu .dropdown-item {
+    color: #808080;
+}
+
+.navbar .navbar-logo:hover {
+    background-color: inherit;
+    text-decoration: none;
+}
+
+.navbar .navbar-logo img {
+    height: 50px;
+}
+
+.navbar a:hover {
+    background-color: #f3ede1;
+    color: #782f40;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #aaa;
+    color: #000000;
+}
+
+.navbar a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.navbar-nav .dropdown-menu {
+    left: auto;
+    right: 0;
+}
+
+.pagination-container {
+    background-color: #CEB888; /* Gold color */
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px; /* Optional: rounded corners */
+    position: relative; /* Necessary for absolute positioning of the pseudo-element */
+}
+
+.page-item {
+    margin: 0 15px; /* Increase separation of the buttons if needed */
+}
+
+.page-link {
+    color: #000000; /* Text color */
+    background-color: #f3ede1; /* Button background color */
+    border: 1px solid #CEB888; /* Gold border for buttons */
+    padding-bottom: 5px; /* Add space for the black line */
+}
+
+.page-link:hover {
+    color: #CEB888; /* Gold text color on hover */
+    background-color: #ffffff;
+    border: 1px solid #CEB888;
+}
+
+.pagination-container::after {
+    content: '';
+    position: absolute;
+    bottom: 5px; /* Positioning the line inside the gold bar, 5px from the bottom */
+    left: 0;
+    right: 0;
+    height: 2px; /* Thickness of the black line */
+    background-color: #000000; /* Black color */
+}
+
+#toggle-pagination {
+    margin: 10px auto;
+    display: block;
+}
